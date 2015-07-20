@@ -1,13 +1,15 @@
 " vim: fdm=marker ts=2 sts=2 sw=2 fdl=0
 
-" Sections:
-"		-> General
-"		-> User intefaces
-"		-> Colors and fonts
-"		-> Plugins
-
-filetype plugin indent on
-
+" Spaces & Tabs {{{
+set tabstop=2           " 4 space tab
+set expandtab           " use spaces for tabs
+set softtabstop=2       " 4 space tab
+set shiftwidth=2
+set modelines=1
+filetype indent on
+filetype plugin on
+set autoindent
+" }}}
 
 " General {{{
 	set mouse=a											" Enable use of the mouse for all modes
@@ -15,9 +17,15 @@ filetype plugin indent on
 	set history=1000								" Sets how many lines of history NEOVIM has to remember
 	set hidden
 	set showcmd											" Show partial commands in the last line of the screen
+	let mapleader=","
 
 "}}}
 
+" Mapping {{{
+	inoremap jk <esc>           " jk is escape 
+  nnoremap <leader>w :NERDTree<CR>
+
+" }}}
 
 " User interfaces {{{
 	set number
@@ -32,6 +40,13 @@ filetype plugin indent on
 "	colorscheme codeschool
 "	set background=dark
 "	let base16colorspace=0
+	let g:airline#extensions#tabline#enabled = 1
+	let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+  set laststatus=2
+	let g:airline_powerline_fonts = 1
+	set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h20
+	let g:airline_theme='papercolor'
 " }}}
 
 

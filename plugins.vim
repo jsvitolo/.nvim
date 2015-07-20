@@ -1,1 +1,5 @@
 Plug 'dsawardekar/ember.vim'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
