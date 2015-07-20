@@ -1,0 +1,1 @@
+Plug 'dsawardekar/ember.vim'
